@@ -3,76 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NOVEL DOJO</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assests/images/kaguya.png">
-    <script src="script.js"></script>
+    <link rel="icon" href="assests/images/nd.jpg">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- <script>
-        fetch('assests/html_files/navbar.html')
-            .then(res => res.text())
-            .then(data =>{
-                const parsedNavbar = new DOMParser().parseFromString(data, 'text/html');
-                const headerElement = parsedNavbar.querySelector('.cont');
-                const navbarHTML = headerElement.innerHTML;
-                const currentHeader = document.querySelector('.cont');
-                currentHeader.innerHTML = navbarHTML;
 
-                
-                    const but = document.querySelector('.switch');
-                    const body = document.querySelector('body');
-                    console.log(but)
-                    but.addEventListener('click', () => {
-                    if(but.textContent === '🌙'){
-                        but.textContent = '🌞'
-                        body.style['background-color'] = 'white';
-                    }
-                    else{
-                        but.textContent = '🌙'
-                        body.style['background-color'] = 'rgb(53, 48, 48)';
-                    }
-                    })
-            })
-
-            fetch('assests/html_files/footer.html')
-            .then(res => res.text())
-            .then(data =>{
-                const parsedFooter = new DOMParser().parseFromString(data, 'text/html');
-                const footElement = parsedFooter.querySelector('.footer');
-                const foot = footElement.innerHTML;
-                const currentFoot = document.querySelector('.footer');
-                currentFoot.innerHTML = foot;
-                console.log(foot);
-            })
-            
-    </script> -->
 </head>
 <body>
     <div class="alldivs">
         <div class="cont">
         </div>
-        
+        <script>
+            fetch('assests/html_files/navbar.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const summary = document.querySelectorAll('.summary')
+                    const parsedNavbar = new DOMParser().parseFromString(data, 'text/html');
+                    const headerElement = parsedNavbar.querySelector('.cont');
+                    const navbarHTML = headerElement.innerHTML;
+                    const currentHeader = document.querySelector('.cont');
+                    currentHeader.innerHTML = navbarHTML;
+
+                    
+                        const but = document.querySelector('.switch');
+                        const body = document.querySelector('body');
+                        console.log(but)
+                        but.addEventListener('click', () => {
+                        if(but.textContent === '🌙'){
+                            but.textContent = '🌞'
+                            body.style['background-color'] = 'white';
+                            for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "black";
+                            }
+                        }
+                        else{
+                            but.textContent = '🌙'
+                            body.style['background-color'] = 'rgb(53, 48, 48)';
+                        }
+                        })
+                })
+
+                fetch('assests/html_files/footer.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const parsedFooter = new DOMParser().parseFromString(data, 'text/html');
+                    const footElement = parsedFooter.querySelector('.footer');
+                    const foot = footElement.innerHTML;
+                    const currentFoot = document.querySelector('.footer');
+                    currentFoot.innerHTML = foot;
+                    console.log(foot);
+                })
+                
+        </script>
+        <div>
         <div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assests/images/ssscsh.webp" alt="Lord Of The Mysteries cover"style="width:100vw;" >
+                        <div class="imagecontainer">
+                        <img src="assests/images/solo blur.jpg" alt="Solo leveling cover" class="imgblur">
+                        <img src="assests/images/solo-leveling.jpg"class="imgcover">
+                        <div class="content">
+                            <h1>Solo Leveling</h1>
+                            <p>Solo Leveling, also alternatively translated as Only I Level Up, is a South Korean web novel written by Chugong. It was serialized in Kakao's digital comic and fiction platform KakaoPage beginning on July 25, 2016, and was later published by D&C Media under their Papyrus label since November 4, 2016
+                            </p>
+                        </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assests/images/lotm_img.jpeg" alt="sss class suicide hunter cover"style="background-color: rgb(53, 48, 48);width:100vw;" >
+                        <div class="imagecontainer">
+                        <img src="assests/images/archmageblur.png" alt="Archmage returns after 4000 years cover" class="imgblur">
+                        <img src="assests/images/archmage.jpg"class="imgcover">
+                        <div class="content">
+                            <h1>The Great Mage Returns After 4000 years</h1>
+                            <p>The Great Mage Returns After 4000 Years is a novel about Elijah Lighton, who wakes up in the supernatural world and realizes that his life has been a vacation from who he truly is. After an encounter with an angel, he discovers his other life and must come to terms with who he is while also fulfilling his responsibility. 
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imagecontainer">
+                        <img src="assests/images/greatest estate developer blur.jpg" alt="The greatest estate developer cover" class="imgblur">
+                        <img src="assests/images/greatest estate developer.jpg"class="imgcover">
+                        <div class="content">
+                            <h1>The Greatest Estate Developer</h1>
+                            <p>The Greatest Estate Developer is a Korean webnovel written by BK_Moon and ilustrated by Manggi. It was serialized on NAVER Series from June 3rd, 2019 to November 12th, 2020. A manhwa adaptation adapted by Lee Hyunmin and illustrated by Kim Hyunsoo began on August 5th, 2021 on NAVER Webtoon.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imagecontainer">
+                        <img src="assests/images/lotmblur.png" alt="Lord Of The Mysteries cover" class="imgblur">
+                        <img src="assests/images/lord of the mysteries.jpg"class="imgcover">
+                        <div class="content">
+                            <h1>Lord of the Mysteries</h1>
+                            <p>Lord of Mysteries is a western fantasy (xuanhuan) web novel written by the Chinese author Cuttlefish 
+                                That Loves Diving and published on QiDian. At the end of April 2020, the novel finished its eighth and final volume. 
+                                The web novel was officially translated by CKTalon and published on Webnovel.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imagecontainer">
+                        <img src="assests/images/orv blur.jpg" alt="Omniscient Readers viewpoint cover" class="imgblur">
+                        <img src="assests/images/orv.jpeg"class="imgcover">
+                        <div class="content">
+                            <h1>Omniscient Reader's Viewpoint</h1>
+                            <p>Omniscient Reader's Viewpoint (ORV) is a novel by Sing Shong about Kim Dokja, an office worker who is the only reader of an obscure online novel called Three Ways to Survive in a Ruined World. When the real world becomes similar to the novel, Kim's knowledge of the novel becomes essential to his survival. He teams up with the novel's protagonist, Yoo Joonghyuk, to change the plot and end the story more quickly.</p>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="imagecontainer">
+                        <img src="assests/images/ssscsh.webp" alt="sss class suicide hunter cover" class="imgblur">
+                        <img src="assests/images/sss.jpg"class="imgcover">
+                        <div class="content">
+                            <h1>SSS Class Suicide Hunter</h1>
+                            <p>SSSClass Suicide Hunter is a Korean web novel written by Shin Noah that ran from November 2018 to May 2020. The story is about Kim Gongja, who dies by suicide multiple times to become the world's greatest hunter. The novel is set in a future where humans have developed virtual technologies that allow them to see, touch, and do things in a magical world. The novel covers action, adventure, and comedy genres.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imagecontainer">
+                        <img src="assests/images/tbate blur.png" alt="tbate cover" class="imgblur">
+                        <img src="assests/images/tbate.jpeg"class="imgcover">
+                        <div class="content">
+                            <h1>The Beginning After The End</h1>
+                            <p>The Beginning After the End (TBATE) is an English action fantasy novel written by TurtleMe (Brandon Lee) and illustrated by Fuyuki23. It was first published on Tapas in January 2017 and has 1,323 episodes. The story follows King Grey, who is reincarnated as Arthur Leywin on the continent of Dicathen, where he uses his military experience to become a mage.</p>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 
             <div class="swiper-pagination"></div>
             </div>
         </div>
-            <!-- <p id="p">Website under development</p>
-            <p id="p1">Watch our progress on <a href="https://github.com/giggityglenn/mini_proj">github</a></p> -->
+    </div>
         </div>
         <div class="novels">
-            <a href="assests/html_files/lotm.html" class="novel-link">
+            <a href="./lotm.html" class="novel-link">
                 <div class="flexing">
-                    <img src="assests/images/lotm.jpg" alt="Lord Of The Mysteries cover" class="image">
+                    <img src="assests/images/lord of the mysteries.jpg" alt="Lord Of The Mysteries cover" class="image">
                     <p class="summary">
                         <b>Lord of the mysteries</b><br><br>
                         In the waves of steam and machinery, who could achieve extraordinary? In the fogs of history and darkness, who was whispering? I woke up from the realm of mysteries and opened my eyes to the world.
@@ -80,9 +152,9 @@
                     </p>
                 </div>
             </a>
-            <a href="../html_files/ssscsh.html" class="novel-link"></a>
+            <a>
                 <div class="flexing">
-                    <img src="assests/images/ssscsh.jpg" alt="sss class suicide hunter cover" class="image">
+                    <img src="assests/images/sss.jpg" alt="sss class suicide hunter cover" class="image">
                     <p class="summary">
                         <b>SSS class suicide hunter</b><br><br>
                         I want an S-Rank skill too! I want it so badly, I could die for it!
@@ -93,20 +165,62 @@
                     </p>
                 </div>
             </a>
-            
-            <a href="../mini_proj/html_files/dse.html" class="novel-link">
+            <a>
                 <div class="flexing">
-                    <img src="../images/deep-sea-embers.webp" alt="deep sea embers cover" class="image" height="130%" padding-top: 20px;">
+                    <img src="assests/images/archmage.jpg" alt="great mage after 4000 years cover" class="image">
                     <p class="summary">
-                        <b>Deep sea embers</b><br><br>
-                        On that day, the fog blocked everything.
+                        <b>The Great Mage Returns After 4000 Years</b><br><br>
+                        The worst student of Westroad Academy. The disgrace of the Blake House. A new soul enters the body of Frey Blake, who couldn’t overcome his miserable life and chose death instead.
 
-                        On that day, he became the captain of a ghost ship.
+                        «What’s with this body? I’ll have to work on tuning it from scratch.»
 
-                        On that day, he stepped through the thick fog and confronted a completely subverted and fragmented world—the old order had vanished, strange phenomonoms dominated the endless seas beyond civilized society, and isolated island city-states and fleets of ships challenged the sea that had become the last ember of lights for the civilized world. All of this while the shadows of the old days were still stirring in the deep sea, waiting to to devour this world that was about to die.
+                        The Great Mage Lucas Traumen, with the body of Frey Blake, gains a chance at revenge!
 
-                        But for the new captain of the ghost ship Vanished, there was only one question he had to consider first: Who knows how to drive this ship?!
+                    </p>
+                </div>
+            </a>
+            <a>
+                <div class="flexing">
+                    <img src="assests/images/greatest estate developer.jpg" alt="estate developer cover" class="image">
+                    <p class="summary">
+                        <b>The Greatest Estate Developer</b><br><br>
+                        The only son of a country side baron, who is called tr*sh and hated by his family, subordinates, and every citizen of the fief.
 
+                        One day, he suddenly loses consciousness, and when he opens his eyes… Inside his body was… a Korean civil engineer.
+
+                    </p>
+                </div>
+            </a>
+            <a>
+                <div class="flexing">
+                    <img src="assests/images/orv.jpeg" alt="orv cover" class="image">
+                    <p class="summary">
+                        <b>Omniscient Reader's Viewpoint</b><br><br>
+                        Only I know the end of this world. One day our MC finds himself stuck in the world of his favorite webnovel. What does he do to survive? It is a world struck by catastrophe and danger all around. His edge? He knows the plot of the story to end. Because he was the sole reader that stuck with it. Read his story to see how he survives!
+
+                    </p>
+                </div>
+            </a>
+            <a>
+                <div class="flexing">
+                    <img src="assests/images/tbate.jpeg" alt="tbate cover" class="image">
+                    <p class="summary">
+                        <b>The Beginning After The End</b><br><br>
+                        King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability. However, solitude lingers closely behind those with great power. Beneath the glamorous exterior of a powerful king lurks the shell of man, devoid of purpose and will.
+
+                        Reincarnated into a new world filled with magic and monsters, the king has a second chance to relive his life. Correcting the mistakes of his past will not be his only challenge, however. Underneath the peace and prosperity of the new world is an undercurrent threatening to destroy everything he has worked for, questioning his role and reason for being born again
+                    </p>
+                </div>
+            </a>
+            <a>
+                <div class="flexing">
+                    <img src="assests/images/northern-blade.jpg" alt="northern-blade cover" class="image">
+                    <p class="summary">
+                        <b>The Legend Of Northen Blade</b><br><br>
+                        For decades, the brave warriors of the Northern Army fought to keep the world safe from the evil Silent Night. But when the fourth-generation leader, Jin Kwan-Ho is accused of colluding with the enemy, he is forced to disband the sect and commit suicide to protect his son, Jin Mu-Won. With no family and allies left, Mu-Won leads a dreary life under close surveillance… until a surprise attack from the Silent Night gives him a chance to escape to the mountains.
+
+                        There, the young warrior trains to master the fighting techniques of his predecessors, before the mysterious disappearance of a loved one brings him back to the mainland. Follow Jin Mu-Won as he embarks on a journey to avenge his father’s death and take down the villains who threaten to plunge the world into darkness!
+                        
                     </p>
                 </div>
             </a>
@@ -115,17 +229,19 @@
         </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>  var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
     });
 </script>
 </body>
