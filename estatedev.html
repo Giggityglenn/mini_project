@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Greatest Estate Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assests/images/nd.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="alldivs">
+        <div class="cont">
+        </div>
+        <script>""
+            fetch('assests/html_files/navbar.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const summary = document.querySelectorAll('.summary')
+                    const parsedNavbar = new DOMParser().parseFromString(data, 'text/html');
+                    const headerElement = parsedNavbar.querySelector('.cont');
+                    const navbarHTML = headerElement.innerHTML;
+                    const currentHeader = document.querySelector('.cont');
+                    currentHeader.innerHTML = navbarHTML;
+
+                    const but = document.querySelector('.switch');
+                    const body = document.querySelector('body');
+                    but.addEventListener('click', () => {
+                    if(but.textContent === '🌙'){
+                        but.textContent = '🌞'
+                        body.style['background-color'] = 'white';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "black";
+                        }
+                    }
+                    else{
+                        but.textContent = '🌙'
+                        body.style['background-color'] = 'rgb(53, 48, 48)';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "white";
+                        }
+                    }
+                    })
+                })
+
+                fetch('assests/html_files/footer.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const parsedFooter = new DOMParser().parseFromString(data, 'text/html');
+                    const footElement = parsedFooter.querySelector('.footer');
+                    const foot = footElement.innerHTML;
+                    const currentFoot = document.querySelector('.footer');
+                    currentFoot.innerHTML = foot;
+                })
+        </script>
+        <div class="individuals">
+            <img src="assests/images/greatest estate developer.jpg " alt="The Greatest Estate Developer cover" class="image cover-image">
+            <p class="summary">
+                <b>The Greatest Estate Developer</b><br><br>
+                The only son of a country side baron, who is called tr*sh and hated by his family, subordinates, and every citizen of the fief.
+
+                        One day, he suddenly loses consciousness, and when he opens his eyes… Inside his body was… a Korean civil engineer.
+                <br><br>
+            </p>
+            
+        </div>
+        <div  class="details">
+            <div>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa-solid fa-star-half" style="color: #FFAB0F;"></h4>
+                <h4>4.5/5 Rating</h4>
+            </div>
+            <div>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rmrwnDTjYII?si=CpJkdWf4qngilJdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <a href="epub/The_Grea...Designer.epub" download>
+                    <button class="download">download here <i class="fa-solid fa-download"></i> </button>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>    
+</body>
+</html>

@@ -283,6 +283,8 @@ a{
   background-color: transparent;
   color:#FFAB0F;
   border: 1px solid #FFAB0F;
+  padding: 7px;
+  margin: 10px;
 }
 .btn:hover{
   background-color: #fdb42b;
@@ -296,6 +298,7 @@ a{
   background-color: #FFAB0F;
   color: white;
   border-radius: 5%;
+  padding: 20px;
 }
 
 .hover-1 {

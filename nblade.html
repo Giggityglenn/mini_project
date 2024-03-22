@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend Of Northen Blade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assests/images/nd.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="alldivs">
+        <div class="cont">
+        </div>
+        <script>""
+            fetch('assests/html_files/navbar.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const summary = document.querySelectorAll('.summary')
+                    const parsedNavbar = new DOMParser().parseFromString(data, 'text/html');
+                    const headerElement = parsedNavbar.querySelector('.cont');
+                    const navbarHTML = headerElement.innerHTML;
+                    const currentHeader = document.querySelector('.cont');
+                    currentHeader.innerHTML = navbarHTML;
+
+                    const but = document.querySelector('.switch');
+                    const body = document.querySelector('body');
+                    but.addEventListener('click', () => {
+                    if(but.textContent === '🌙'){
+                        but.textContent = '🌞'
+                        body.style['background-color'] = 'white';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "black";
+                        }
+                    }
+                    else{
+                        but.textContent = '🌙'
+                        body.style['background-color'] = 'rgb(53, 48, 48)';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "white";
+                        }
+                    }
+                    })
+                })
+
+                fetch('assests/html_files/footer.html')
+                .then(res => res.text())
+                .then(data =>{
+                    const parsedFooter = new DOMParser().parseFromString(data, 'text/html');
+                    const footElement = parsedFooter.querySelector('.footer');
+                    const foot = footElement.innerHTML;
+                    const currentFoot = document.querySelector('.footer');
+                    currentFoot.innerHTML = foot;
+                })
+        </script>
+        <div class="individuals">
+            <img src="assests/images/northern-blade.jpg " alt="The Legend Of Northen Blade cover" class="image cover-image">
+            <p class="summary">
+                <b>The Legend Of Northen Blade</b><br><br>
+                For decades, the brave warriors of the Northern Army fought to keep the world safe from the evil Silent Night. But when the fourth-generation leader, Jin Kwan-Ho is accused of colluding with the enemy, he is forced to disband the sect and commit suicide to protect his son, Jin Mu-Won. With no family and allies left, Mu-Won leads a dreary life under close surveillance… until a surprise attack from the Silent Night gives him a chance to escape to the mountains.
+
+                There, the young warrior trains to master the fighting techniques of his predecessors, before the mysterious disappearance of a loved one brings him back to the mainland. Follow Jin Mu-Won as he embarks on a journey to avenge his father’s death and take down the villains who threaten to plunge the world into darkness!
+                <br><br>
+            </p>
+            
+        </div>
+        <div  class="details">
+            <div>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa fa-star" style="color: #FFAB0F;"></h4>
+                <h4 class="fa-solid fa-star-half" style="color: #FFAB0F;"></h4>
+                <h4>4.5/5 Rating</h4>
+            </div>
+            <div>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <button class="btn">action</button>
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bRVwRu5Rfns?si=kWVonKIdqrPq_AAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <a href="epub/The_Lege...rn_Blade.epub" download>
+                    <button class="download">download here <i class="fa-solid fa-download"></i> </button>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>    
+</body>
+</html>

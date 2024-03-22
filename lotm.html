@@ -16,6 +16,7 @@
             fetch('assests/html_files/navbar.html')
                 .then(res => res.text())
                 .then(data =>{
+                    const summary = document.querySelectorAll('.summary')
                     const parsedNavbar = new DOMParser().parseFromString(data, 'text/html');
                     const headerElement = parsedNavbar.querySelector('.cont');
                     const navbarHTML = headerElement.innerHTML;
@@ -28,10 +29,16 @@
                     if(but.textContent === '🌙'){
                         but.textContent = '🌞'
                         body.style['background-color'] = 'white';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "black";
+                        }
                     }
                     else{
                         but.textContent = '🌙'
                         body.style['background-color'] = 'rgb(53, 48, 48)';
+                        for(let i = 0; i< summary.length; i++){
+                                summary[i].style.color = "white";
+                        }
                     }
                     })
                 })
@@ -74,7 +81,7 @@
                 <div class="trailer">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/a8p-l75icsA?si=y1RQUPLML9XLnBy_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <a href="#" download>
+                <a href="epub/Lord_of_...ysteries.epub" download>
                     <button class="download">download here <i class="fa-solid fa-download"></i> </button>
                 </a>
             </div>
